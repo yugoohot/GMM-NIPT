@@ -104,8 +104,5 @@ print(val)
 with open("csvnames.txt", "r") as f:
     csvnames = f.readlines()
     for csvname in csvnames:
-        try:
-            g=GMM(10,p,means,covs,30000)
-            g.fit_samples(csvname.strip()) 
-        except:
-            g.fit3(csvname.strip()) 
+        g=GMM(10,p,means,covs,30000)
+        g.fit_samples(csvname.strip()) 
